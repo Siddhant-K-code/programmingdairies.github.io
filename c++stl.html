@@ -49,7 +49,7 @@ Huge collection of data structure articles on various topics which are useful fo
     <!-----START NAVBAR---------->
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Programming Dairies</a>
+	      <a class="navbar-brand" href="https://programmingdairies.github.io/">Programming Dairies</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> 
 	      </button>
@@ -82,15 +82,36 @@ Huge collection of data structure articles on various topics which are useful fo
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	                   <div class="heading-section">
                             <p>C++ STL also has some containers (pre-build data structures) like vectors, iterators, pairs etc. These are all generic class which can be used to represent collection of any data type.</p>
+                           <ul>
+                               <li><a href="#string">String</a></li>
+                               <li><a href="#vector">Vector</a></li>
+                               <li><a href="#list">List</a></li>
+                               <li><a href="#pair">Pair</a></li>
+                               <li><a href="#sets">Sets</a></li>
+                               <li><a href="#maps">Maps</a></li>
+                               <li><a href="#stacks">Stacks</a></li>
+                               <li><a href="#queues">Queues</a></li>
+                               <li><a href="#priorityqueues">Priority Queues</a></li>
+                           </ul>
 	                       <h2 class="mb-4">Iterator</h2>
                             <p>An iterator is any object that, points to some element in a range of elements (such as an array or a container) and has the ability to iterate through those elements using a set of operators (with at least the increment (++) and dereference (*) operators).</p>
                             <p>A pointer is a form of an iterator. A pointer can point to elements in an array, and can iterate over them using the increment operator (++). There can be other types of iterators as well. For each container class, we can define iterator which can be used to iterate through all the elements of that container.</p>
                             <p><strong>Example:</strong></p>
                             <code style="color: black; font-family: monospace;">vector &#x3C;int&#x3E;::iterator  it;</code><br>
                             <code style="color: black; font-family: monospace;">list &#x3C;int&#x3E;::iterator it;</code>
+                           </div>
+                    </div>
+                </div>
+        </div>
+      </section>
                   
-                            <p>You will see the implementations using iterators in the topics explained below.</p>
-                            <h2 class="mb-4">String</h2>
+                  <section class="ftco-section ftco-no-pb" style="margin-top: 400px;">
+			<div class="container">
+				<div class="row" style="margin-top: -400px;">
+					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
+	          <div class="heading-section">
+                  
+                            <h2 class="mb-4" id="string">String</h2>
                             <p>C++ provides a powerful alternative for the <strong>char*</strong>. It is not a built-in data type, but is a container class in the Standard Template Library. String class provides different string manipulation functions like concatenation, find, replace etc. Let us see how to construct a string type.</p>
                             <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;">
 <code>    string s0;                                       // s0 = &#x201C;&#x201D;
@@ -164,7 +185,7 @@ Huge collection of data structure articles on various topics which are useful fo
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Vector</h2>
+<h2 class="mb-4" id="vector">Vector</h2>
                   <p>
 Vectors are sequence containers that have dynamic size. In other words, vectors are dynamic arrays. Just like arrays, vector elements are placed in contiguous storage location so they can be accessed and traversed using iterators. To traverse the vector we need the position of the first and last element in the vector which we can get through <strong>begin()</strong> and <strong>end()</strong> or we can use indexing from 0 to <strong>size()</strong>. Let us see how to construct a vector.</p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    vector&lt;int&gt; a;                                       // empty vector of ints
@@ -243,7 +264,7 @@ Vectors are sequence containers that have dynamic size. In other words, vectors 
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">List</h2><p>
+<h2 class="mb-4" id="list">List</h2><p>
 List is a sequence container which takes constant time in inserting and removing elements. List in STL is implemented  as Doubly Link List.</p>
 <p>The elements from List cannot be directly accessed. For example to access element of a particular position ,you have to iterate from a known position to that particular position. </p>
 <p>//declaration</p>
@@ -344,7 +365,7 @@ int main()
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Pair</h2><p>
+<h2 class="mb-4" id="pair">Pair</h2><p>
 Pair is a container that can be used to bind together a two values which may be of different types. Pair provides a way to store two heterogeneous objects as a single unit. </p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    pair &lt;int, char&gt; p1;                    // default
     pair &lt;int, char&gt; p2 (1, ‘a’);            // value inititialization
@@ -387,7 +408,7 @@ Pair is a container that can be used to bind together a two values which may be 
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Sets</h2><p>
+<h2 class="mb-4" id="sets">Sets</h2><p>
 Sets are containers which store only unique values and permit easy look ups. The values in the sets are stored in some specific order (like ascending or descending). Elements can only be inserted or deleted, but cannot be modified.  We can access and traverse set elements using iterators just like vectors.</p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    set&lt;int&gt; s1;                               //     Empty Set
     int a[]= {1, 2, 3, 4, 5, 5};
@@ -447,7 +468,7 @@ Sets are containers which store only unique values and permit easy look ups. The
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Maps</h2><p>
+<h2 class="mb-4" id="maps">Maps</h2><p>
 Maps are containers which store elements by mapping their value against a particular key. It stores the combination of key value and mapped value following a specific order.
 Here key value are used to uniquely identify the elements mapped to it. The data type of key value and mapped value can be different. Elements in map are always in sorted order by their corresponding key and can be accessed directly by their key using bracket operator ([ ]).  </p>
 <p>In map, key and mapped value have a pair type combination,i.e both key and mapped value can be accessed using pair type functionalities with the help of iterators. </p>
@@ -579,7 +600,7 @@ Some Member Functions of map:<br />
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Stacks</h2><p>
+<h2 class="mb-4" id="stacks">Stacks</h2><p>
 Stack is a container which follows the <strong>LIFO (Last In First Out)</strong> order and the elements are inserted and deleted from one end of the container. The element which is inserted last will be extracted first.</p>
 <p>Declaration:</p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    stack &lt;int&gt; s;
@@ -650,7 +671,7 @@ Stack is a container which follows the <strong>LIFO (Last In First Out)</strong>
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Queues:</h2>
+<h2 class="mb-4" id="queues">Queues:</h2>
 <p>Queue is a container which follows <strong>FIFO order (First In First Out)</strong> . Here elements are inserted at one end (rear ) and extracted from another end(front) .</p>
 <p>Declaration:</p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    queue &lt;int&gt; q;
@@ -694,6 +715,7 @@ Stack is a container which follows the <strong>LIFO (Last In First Out)</strong>
                          </div>
                     </div>
                 </div>
+                      </div>
       </section>
                   
                   <section class="ftco-section ftco-no-pb" style="margin-top: 400px;">
@@ -701,7 +723,7 @@ Stack is a container which follows the <strong>LIFO (Last In First Out)</strong>
 				<div class="row" style="margin-top: -400px;">
 					<div class="col-md-11 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-<h2 class="mb-4">Priority Queue:</h2><p>
+<h2 class="mb-4" id="priorityqueues">Priority Queue:</h2><p>
 A priority queue is a container that provides constant time extraction of the largest element, at the expense of logarithmic insertion. It is similar to the heap in which we can add element at any time but only the maximum element can be retrieved. In a priority queue, an element with high priority is served before an element with low priority. </p>
 <p>Declaration:</p>
 <pre style="background-color: azure; border-radius: 15px; border: 2px solid #73AD21;"><code>    priority_queue&lt;int&gt; pq;
